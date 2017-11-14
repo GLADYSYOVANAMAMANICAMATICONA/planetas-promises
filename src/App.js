@@ -1,22 +1,27 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {Grid, Row, Col, Button} from 'react-bootstrap';
+import { Grid, Row, Col, Button } from 'react-bootstrap';
+import { search } from './action';
 
 const App = ({ items }) => {
-  const Planets = items.map((planet, index) => {
-    return (
-      <div>
-        <li key={index}>
-          <Planet name={planet.name}  img={planet.img} />
-        </li>
-        <Button
-          className="planets__button">
-          SEARCH
-              </Button>
-      </div>
-    );
-  })
-}
+  return (
+    <Grid>
+      <Row>
+        <Col md={12}>
+          <button onClick={() => search()}>more</button>
+          <div>{items.length != 0 ?
+            items[0].pl_name
+            :
+            <br/>
+    }</div>
+        </Col>
+      </Row>
+    </Grid>
 
-  export default App;
+  );
+
+}
+const mapToPlay = ({items}) => ({items})
+
+export default connect(mapToPlay)(App);
