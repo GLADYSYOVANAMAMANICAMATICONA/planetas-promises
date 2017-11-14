@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { Grid, Row, Col, Button } from 'react-bootstrap';
 import { search } from './action';
@@ -13,6 +12,8 @@ const App = ({ items }) => {
           <button onClick={() => search()}>more</button>
           <div>{items.length != 0 ?
             items[0].pl_name
+
+
             :
             <br/>
     }</div>
