@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { Grid, Row, Col, Button } from 'react-bootstrap';
 import { search } from './action';
+import {connect} from 'redux-zero/react'
 
 const App = ({ items }) => {
   return (
@@ -23,5 +24,4 @@ const App = ({ items }) => {
 
 }
 const mapToPlay = ({items}) => ({items})
-
 export default connect(mapToPlay)(App);
