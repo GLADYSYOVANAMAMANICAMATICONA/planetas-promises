@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {Grid, Row, Col, Button} from 'react-bootstrap';
 
 const App = ({ items }) => {
   const Planets = items.map((planet, index) => {
@@ -10,7 +11,7 @@ const App = ({ items }) => {
           <Planet name={planet.name}  img={planet.img} />
         </li>
         <Button
-          onClick={() => getPlanets()}
+          {/* onClick={() => getPlanets()} */}
           className="planets__button">
           SEARCH
               </Button>
