@@ -11,7 +11,6 @@ const App = ({ items }) => {
           <Planet name={planet.name}  img={planet.img} />
         </li>
         <Button
-          {/* onClick={() => getPlanets()} */}
           className="planets__button">
           SEARCH
               </Button>
