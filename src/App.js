@@ -13,7 +13,6 @@ const App = ({ items }) => {
           <div>{items.length != 0 ?
             items[0].pl_name
 
-
             :
             <br/>
     }</div>
