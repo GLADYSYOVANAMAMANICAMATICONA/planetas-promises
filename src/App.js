@@ -2,20 +2,21 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-class App extends Component {
-  render() {
+const App = ({ items }) => {
+  const Planets = items.map((planet, index) => {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <li key={index}>
+          <Planet name={planet.name}  img={planet.img} />
+        </li>
+        <Button
+          onClick={() => getPlanets()}
+          className="planets__button">
+          SEARCH
+              </Button>
       </div>
     );
-  }
+  })
 }
 
-export default App;
+  export default App;
